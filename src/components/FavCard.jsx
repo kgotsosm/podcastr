@@ -20,7 +20,11 @@ export default function FavCard({ favourites, onRemove }) {
   };
 
   return (
-    <div className="flex flex-row w-[80vw] mx-auto gap-8 p-8 shadow-md ">
+    <div
+      className={`flex flex-row w-[80vw] mx-auto gap-8 p-8 shadow-md transition-transform duration-500 ease-in-out ${
+        isFavourite ? '' : 'transform translate-x-[100vw]'
+      }`}
+    >
       <img
         className="h-20 w-16 sm:h-[20vh] sm:w-[12vw]"
         src={favourites.season_image}
